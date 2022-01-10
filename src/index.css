@@ -1,0 +1,705 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,400;1,300&family=Montserrat:wght@500;600&family=Poppins:ital,wght@0,400;0,600;0,700;0,800;1,500;1,600;1,700&display=swap");
+
+:root {
+  --primary-color: #ffb0b0;
+  --text-primary: rgb(43, 42, 42);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+a {
+  text-decoration: none;
+  color: var(--text-primary);
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.container nav {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  height: 5rem;
+  background-color: var(--primary-color);
+  display: flex;
+  align-items: center;
+  border-bottom: 0.1px solid rgb(116, 116, 116);
+}
+
+.container nav .bars-boxx {
+  width: 30px;
+  height: 30px;
+  display: none;
+  flex-direction: column;
+  margin: 0 1rem;
+  align-items: center;
+}
+
+.container nav .bars-boxx .bar {
+  width: 100%;
+  height: 2px;
+  background-color: black;
+  margin-top: 5px;
+}
+
+.container nav .title {
+  font-size: 20px;
+  font-weight: bolder;
+  padding: 1rem;
+  height: 100%;
+  display: flex;
+  font-family: Poppins;
+  align-items: center;
+  border-right: 1px solid rgb(116, 116, 116);
+}
+
+.container nav ul {
+  width: 650px;
+  display: flex;
+  align-items: center;
+  list-style: none;
+  justify-content: flex-end;
+  height: 100%;
+  border-right: 1px solid rgb(116, 116, 116);
+}
+
+.container nav ul li {
+  margin: 0 2rem;
+  font-size: 14px;
+  pointer-events: all;
+  cursor: pointer;
+  font-family: Montserrat;
+}
+
+.container nav .side-menu {
+  width: 300px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  border-right: 1px solid rgb(116, 116, 116);
+  justify-content: space-between;
+}
+
+.container nav .side-menu span {
+  font-family: Poppins;
+  font-size: 16px;
+  text-transform: uppercase;
+  margin: 0 1rem;
+}
+
+.container nav .side-menu .bars-box {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  flex-direction: column;
+  margin-right: 1rem;
+  align-items: center;
+}
+
+.container nav .side-menu .bars-box .bar {
+  width: 100%;
+  height: 2px;
+  background-color: black;
+  margin-top: 5px;
+}
+
+.container nav .price {
+  display: flex;
+  width: auto;
+  height: 100%;
+  align-items: center;
+}
+
+.container nav .price span {
+  font-family: Montserrat;
+  padding: 0 2rem;
+}
+
+.children {
+  width: 100%;
+  height: auto;
+}
+
+.children .home {
+  width: 100%;
+  height: 88vh;
+  background-color: var(--primary-color);
+  display: flex;
+}
+
+.children .home section {
+  width: 60%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  border-right: 1px solid rgb(116, 116, 116);
+}
+
+.children .home section p:nth-child(1) {
+  font-size: 4rem;
+  font-family: Poppins, "Firo-Sans";
+  width: 80%;
+  color: var(--text-primary);
+}
+
+.children .home section p:nth-child(2) {
+  font-size: 4rem;
+  font-family: Poppins, "Firo-Sans";
+  width: 80%;
+  line-height: 30px;
+  color: var(--text-primary);
+}
+
+.children .home section p:nth-child(2) {
+  font-size: 14px;
+  font-family: Poppins, "Firo-Sans";
+  width: 80%;
+  color: var(--text-primary);
+  overflow-x: hidden;
+}
+
+.children .home section button {
+  font-size: 15px;
+  border: 1px solid rgb(116, 116, 116);
+  outline: none;
+  background-color: inherit;
+  height: 100px;
+  padding: 1rem;
+  border-radius: 50%;
+  cursor: pointer;
+  pointer-events: all;
+}
+
+.children .home section:nth-child(2) {
+  width: 40%;
+  height: 100%;
+}
+
+.checkout {
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+}
+
+.checkout .go-to-cart {
+  width: auto;
+  height: auto;
+  padding: 1rem;
+  border-radius: 50%;
+  position: fixed;
+  background-color: green;
+  color: white;
+  right: 30%;
+  top: 30%;
+  cursor: pointer;
+}
+
+.checkout::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+.checkout::-webkit-scrollbar-track {
+  background: var(--primary-color);
+}
+
+/* Handle */
+.checkout::-webkit-scrollbar-thumb {
+  background: rgb(224, 23, 57);
+  border-radius: 30px;
+}
+
+/* Handle on hover */
+.checkout::-webkit-scrollbar-thumb:hover {
+  background: rgb(138, 12, 12);
+}
+
+.wine {
+  padding: 2rem 1rem;
+  width: 70%;
+  flex-direction: column;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.wine img {
+  height: 400px;
+}
+
+.wine .wine-description {
+  width: 100%;
+  display: flex;
+  padding: 2rem 0;
+  border-bottom: 3px solid black;
+}
+
+.wine .wine-price {
+  width: 100%;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.wine .wine-price .add {
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  border: 1px solid #000;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  cursor: pointer;
+  pointer-events: all;
+}
+
+.payment {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.payment::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+.payment::-webkit-scrollbar-track {
+  background: var(--primary-color);
+}
+
+/* Handle */
+.payment::-webkit-scrollbar-thumb {
+  background: rgb(224, 23, 57);
+  border-radius: 30px;
+}
+
+/* Handle on hover */
+.payment::-webkit-scrollbar-thumb:hover {
+  background: rgb(138, 12, 12);
+}
+
+.payment h3 {
+  text-align: center;
+  font-family: Poppins;
+  font-size: 30px;
+  font-weight: 400;
+}
+
+.payment .cart-item {
+  width: 100%;
+  display: flex;
+  padding: 1rem;
+  align-items: center;
+}
+
+.payment .cart-item span {
+  font-family: Montserrat;
+  font-size: 18px;
+  font-weight: bold;
+  width: 200px;
+}
+
+.payment .cart-item p {
+  margin: 0 2rem;
+  font-size: 16px;
+}
+
+.payment .cart-item div {
+  margin: 0 2rem;
+  font-size: 20px;
+}
+
+.payment .total {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+
+.payment .total span {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.payment .total span:nth-child(1) {
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.payment .pay {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 1rem;
+}
+
+.payment .pay button {
+  border: none !important;
+  border-radius: 4px !important;
+  outline: none !important;
+  height: auto !important;
+  padding: 0.7rem !important;
+  color: white !important;
+  background-color: #c73232 !important;
+}
+
+.payment .card-details {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 100px;
+}
+
+.payment h4 {
+  margin: 0 1rem;
+  font-size: 20px;
+}
+
+.payment .card-details form {
+  width: 100%;
+  height: 100%;
+}
+
+.payment .card-details form input[type="text"] {
+  width: 20%;
+  margin: 0 0.5rem;
+  background-color: white;
+  outline: none;
+  border: 1px solid rgb(15, 15, 15);
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+}
+
+.about-us {
+  display: flex;
+  width: 100%;
+  height: 88vh;
+  background-color: var(--primary-color);
+}
+.about-us section:nth-child(1) {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-us section:nth-child(1) img {
+  width: 80%;
+  height: 80%;
+}
+
+.about-us section:nth-child(2) {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-us section:nth-child(2) p {
+  width: 80%;
+  height: auto;
+  font-family: Montserrat;
+  font-size: 15px;
+  line-height: 30px;
+}
+
+.ourstory {
+  width: 100%;
+  height: 88vh;
+  background-color: var(--primary-color);
+  display: grid;
+  grid-template-columns: repeat(3, 30%);
+  grid-template-rows: 17em 17em;
+  overflow-y: auto;
+  gap: 1rem;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.ourstory img {
+  width: 100%;
+  height: 100%;
+}
+
+.contact-us {
+  width: 100%;
+  height: 88vh;
+  display: flex;
+  background-color: var(--primary-color);
+}
+
+.contact-us section:nth-child(1) {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-us section:nth-child(1) p {
+  width: 80%;
+  font-family: Montserrat;
+  font-size: 20px;
+  color: var(--text-primary);
+  line-height: 30px;
+}
+
+.contact-us h3 {
+  text-align: center;
+  font-family: Montserrat;
+  font-size: 30px;
+  color: var(--text-primary);
+}
+
+.contact-us section:nth-child(2) {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0 2em;
+}
+
+.contact-us section:nth-child(2) form {
+  width: 100%;
+}
+
+.contact-us section:nth-child(2) form .inputBox {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-us section:nth-child(2) form .inputBox input {
+  width: 100%;
+  padding: 0.5rem;
+  font-family: Poppins;
+  border: 1px solid var(--text-primary) !important;
+  outline: none !important;
+  margin: 0.5rem 0;
+  border-radius: 4px;
+}
+
+.contact-us section:nth-child(2) .inputBox textarea {
+  height: 200px;
+  outline: none;
+  border: 1px solid var(--text-primary);
+  padding: 1rem;
+  font-family: Poppins;
+  font-size: 16px;
+  margin-top: 0.5rem;
+}
+
+.contact-us section:nth-child(2) button {
+  width: 100%;
+  outline: none;
+  background-color: #ee8686;
+  color: rgb(141, 15, 15);
+  border: none;
+  border-radius: 4px;
+  padding: 1em;
+  font-size: 15px;
+  font-weight: bold;
+  margin: 1rem 0;
+  cursor: pointer;
+  pointer-events: all;
+}
+
+.shadow {
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  position: fixed;
+  background-color: #000;
+  opacity: 0.4;
+  display: none;
+}
+
+.mobileLayout {
+  width: 300px;
+  height: 100vh;
+  z-index: 2;
+  left: -100%;
+  display: none;
+  position: fixed;
+  background-color: #ee8686;
+  transition: all 500ms cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.mobileLayout span {
+  margin: 1rem 0;
+  font-size: 30px;
+}
+
+.mobileLayout ul {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  align-items: center;
+}
+
+.mobileLayout ul li {
+  padding: 1em;
+  font-size: 20px;
+  font-weight: bold;
+  font-family: Poppins;
+}
+
+.mobileLayout ul li:hover {
+  background-color: #c73232;
+}
+
+.show {
+  left: 0;
+}
+
+.hide {
+  left: -100%;
+}
+
+.payMobile {
+  width: 100px;
+  padding: 0.5rem 0;
+  outline: none !important;
+  border: none !important;
+  background-color: green !important;
+  color: white;
+  font-family: Poppins;
+  display: none;
+}
+
+@media screen and (max-width: 700px) {
+  .container nav ul {
+    display: none;
+  }
+
+  .shadow {
+    display: block;
+  }
+
+  .container nav .title {
+    display: none;
+  }
+
+  .container nav .bars-boxx {
+    display: flex;
+  }
+
+  .mobileLayout {
+    display: flex;
+  }
+  .container nav .side-menu {
+    display: none;
+  }
+
+  .checkout .go-to-cart {
+    display: none;
+  }
+
+  .container {
+    height: 100vh;
+  }
+
+  .checkout {
+    background-color: var(--primary-color);
+  }
+
+  .children .home {
+    flex-direction: column;
+  }
+
+  .payMobile {
+    display: block;
+  }
+
+  .children .home section {
+    width: 100% !important;
+  }
+
+  .about-us {
+    flex-direction: column;
+    height: 100%;
+  }
+
+  .about-us section:nth-child(1),
+  .about-us section:nth-child(2) {
+    width: 100%;
+    margin: 1rem 0;
+    height: auto;
+  }
+
+  .about-us section:nth-child(2) {
+    padding: 0 2rem;
+  }
+
+  .about-us section:nth-child(2) p {
+    font-size: 16px;
+    line-height: 40px;
+    width: 90%;
+  }
+
+  .ourstory {
+    grid-template-columns: 100%;
+  }
+
+  .contact-us {
+    flex-direction: column;
+    height: 100%;
+  }
+
+  .contact-us section:nth-child(1) {
+    width: 100%;
+  }
+  .contact-us section:nth-child(2) {
+    width: 100%;
+    padding: 0;
+  }
+
+  .contact-us section:nth-child(2) form {
+    width: 100%;
+    padding: 0 1rem;
+  }
+}
