@@ -1,10 +1,10 @@
 import { useContext } from "react";
 import Wine, { WineProps } from "../shared/Wine";
 
-import wine1 from "../../../public/wine-1.png";
-import wine2 from "../../../public/wine-2.png";
-import wine3 from "../../../public/wine-3.png";
-import wine4 from "../../../public/wine-4.png";
+import wine1 from "/wine-1.png";
+import wine2 from "/wine-2.png";
+import wine3 from "/wine-3.png";
+import wine4 from "/wine-4.png";
 import React, { useState } from "react";
 import { PayContext } from "../../context/PaymentContext";
 
