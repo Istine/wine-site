@@ -703,3 +703,13 @@ a {
     padding: 0 1rem;
   }
 }
+
+@media screen and (min-width: 1400px) {
+  .about-us section:nth-child(1) img {
+    height: 500px;
+  }
+
+  .ourstory {
+    grid-template-rows: 20em 20em;
+  }
+}
